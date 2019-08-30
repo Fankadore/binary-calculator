@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Binary Calculator</title>
+</head>
+<body>
+	<form class="main binary-main" onsubmit="return false">
+		<h1 class="header">Decimal To Binary</h1>
+		<p class="label decimal-label">Base 10 - Denary - Decimal:</p>
+		<input class="input decimal-input" type="text" pattern="^\d+$" title="Positive integers only." required />
+		<button class="button binary-calculate" type="submit">Calculate</button>
+		<p class="label binary-label">Base 2 - Binary:</p>
+		<p class="display binary-display">0</p>
+		<p class="binary-bits">Requires 1 bit</p>
+	</form>
+	<form class="main decimal-main" onsubmit="return false">
+		<h1 class="header">Binary To Decimal</h1>
+		<p class="label binary-label">Base 2 - Binary:</p>
+		<input class="input binary-input" type="text" pattern="^[01]+$" title="Binary digits only." required />
+		<button class="button decimal-calculate" type="submit">Calculate</button>
+		<p class="label decimal-label">Base 10 - Denary - Decimal:</p>
+		<p class="display decimal-display">0</p>
+	</form>
+	<script src="numberBaseConverters.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

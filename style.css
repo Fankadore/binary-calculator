@@ -1,0 +1,129 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: #003;
+}
+
+.main {
+	display: grid;
+	justify-items: center;
+	padding: 2em;
+	background-color: #eee;
+	border: 4px solid #000;
+	border-radius: 15px;
+}
+.binary-main {
+	grid-template-areas:
+		"header			header		header"
+		"dec-label	dec-label	dec-label"
+		"input			input			button"
+		"bin-label	bin-label	bin-label"
+		"display		display		display"
+		"bits				bits			bits";
+}
+.decimal-main {
+	grid-template-areas:
+		"header			header		header"
+		"bin-label	bin-label	bin-label"
+		"input			input			button"
+		"dec-label	dec-label	dec-label"
+		"display		display		display";
+}
+
+.header {
+	display: header;
+	cursor: default;
+	margin: 0 0.5em 0.5em;
+	padding: 0.5em;
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	font-family: monospace;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.label {
+	width: 100%;
+	align-self: left;
+	font-family: sans-serif;
+}
+.decimal-label {
+	grid-area: dec-label;
+}
+.binary-label {
+	grid-area: bin-label;
+}
+
+.input {
+	grid-area: input;
+	justify-self: left;
+	margin: 1em 0;
+	padding: 0.5em;
+	width: 100%;
+	font-family: monospace;
+	font-size: 1.25rem;
+	font-weight: 900;
+	text-align: center;
+	border: 3px solid #000;
+	-moz-appearance: textfield;
+}
+.input:focus {
+	border: 3px solid #00c;
+}
+.input:required {
+	box-shadow: none;
+}
+
+.button {
+	grid-area: button;
+	justify-self: right;
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: 900;
+	margin: 1em;
+	padding: 0.5em 1em;
+	border-radius: 10px;
+	background-color: #00a;
+	background-image: linear-gradient(#009, #00f);
+	color: #eef;
+}
+.button:hover,
+.button:focus {
+	background-image: none;
+	background-color: #00c;
+	color: #fff;
+}
+.button:active {
+	background-color: #00a;
+	color: #eef;
+}
+
+.display {
+	grid-area: display;
+	cursor: default;
+	width: 100%;
+	margin: 1em;
+	padding: 0.5em 1em;
+	font-family: monospace;
+	font-size: 1.25rem;
+	font-weight: 900;
+	text-align: center;
+	background-color: #fff;
+	border: 2px solid #000;
+}
+
+.binary-bits {
+	grid-area: bits;
+	cursor: default;
+	font-family: sans-serif;
+}
